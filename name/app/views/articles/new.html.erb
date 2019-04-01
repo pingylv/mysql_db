@@ -1,0 +1,26 @@
+<h2>Ticket prototype</h2>
+<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+   <p>
+    <%= form.label :customer %><br>
+    <%= form.text_field :customer %>
+  </p>
+
+  <p>
+    <%= form.label :user %><br>
+    <%= form.text_field :user %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
