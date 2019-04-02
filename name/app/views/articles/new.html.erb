@@ -1,45 +1,6 @@
-<h2>Ticket prototype</h2>
+<h2>New Ticket</h2>
 <hr />
-
-<%= form_with scope: :article, url: articles_path, local: true do |form| %>
-
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
  
-  <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-  </p>
-
-   <p>
-    <%= form.label :customer %><br>
-    <%= form.text_field :customer %>
-  </p>
-
-  <p>
-    <%= form.label :user %><br>
-    <%= form.text_field :user %>
-  </p>
+<%= render 'form' %>
  
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
- 
-<%= link_to 'Cancel', articles_path %>
+<%= link_to 'Back', articles_path %>
