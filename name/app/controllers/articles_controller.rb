@@ -1,12 +1,12 @@
 class ArticlesController < ApplicationController
 	
-  	def index
+  def index
     	@articles = Article.all
-  	end
+  end
 
 	def show
     	@article = Article.find(params[:id])
-  	end
+  end
 
 	def new
 		@article = Article.new
@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
 	def create
 		@article = Article.new(article_params)
 		 
- 		if @article.save
+ 	    if @article.save
     		redirect_to @article
   		else
     		render 'new'
