@@ -1,12 +1,10 @@
 <hr />
   <strong>Commenter:</strong>
-  <%= comment.commenter %>
+  <%= comment.commenter %> <br>
  
-<p>
   <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
-
+  <%= comment.body %> <br>
+  
   <%= link_to 'Delete Comment', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>

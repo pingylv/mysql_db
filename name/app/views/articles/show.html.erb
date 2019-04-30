@@ -1,31 +1,24 @@
-<h2>Ticket info prototype</h2>
+<h3>Ticket info prototype</h3>
 <hr />
 
-<p>
   <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+  <%= @article.title %> <br>
  
-<p>
   <strong>Description:</strong>
-  <%= @article.description %>
-</p>
+  <%= @article.description %> <br>
 
-<p>
   <strong>Client:</strong>
-  <%= @article.customer %>
-</p>
+  <%= @article.customer %> <br> 
 
-<p>
   <strong>User:</strong>
-  <%= @article.user %>
-</p>
+  <%= @article.user %> <br>
+
 <hr />
 
-<h3>Comments</h3>
+<h4>Comments</h4>
 <%= render @article.comments %>
 <hr />
-<h3>Add a comment:</h3>
+<h4>Add a comment:</h4>
 <%= render 'comments/form' %>
 <hr /> 
 
