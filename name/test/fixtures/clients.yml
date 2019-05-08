@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vards: MyString
+  uzvards: MyString
+  personas_kods: MyString
+  tel_nummurs: MyString
+  epasts: MyString
+  adrese: MyText
+  piezimes: MyText
+
+two:
+  vards: MyString
+  uzvards: MyString
+  personas_kods: MyString
+  tel_nummurs: MyString
+  epasts: MyString
+  adrese: MyText
+  piezimes: MyText
