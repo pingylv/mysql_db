@@ -36,6 +36,13 @@ def update
   end
 end
 
+def destroy
+  @client = Client.find(params[:id])
+  @client.destroy
+ 
+  redirect_to clients_path
+end
+
 private
 	def client_params
 		params.require(:client).permit(:vards,:uzvards,:personas_kods,:tel_nummurs,:epasts,:adrese,:piezimes)
