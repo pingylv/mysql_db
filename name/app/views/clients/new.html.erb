@@ -2,60 +2,7 @@
 
 <h3>Jauna Klienta lapa</h3>
 
-<%= form_with scope: :client, url: clients_path, local: true do |form| %>
-
-  <% if @client.errors.any? %>
-    <div id="error_explanation" class="alert alert-danger" role="alert">
-      <h4>
-        <%= pluralize(@client.errors.count, "kluda") %> Aizliedza sim klientam tikt izveidotam:
-      </h4>
-      <ul>
-        <% @client.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-    <%= form.label :vards %><br>
-    <%= form.text_field :vards %>
-  </p>
-
-  <p>
-    <%= form.label :uzvards %><br>
-    <%= form.text_field :uzvards %>
-  </p>
-
-  <p>
-    <%= form.label :personas_kods %><br>
-    <%= form.text_field :personas_kods %>
-  </p>
-
-  <p>
-    <%= form.label :tel_nummurs %><br>
-    <%= form.text_field :tel_nummurs %>
-  </p>
-
-  <p>
-    <%= form.label :epasts %><br>
-    <%= form.text_field :epasts %>
-  </p>
-
-  <p>
-    <%= form.label :adrese %><br>
-    <%= form.text_area :adrese %>
-  </p>
-
-  <p>
-    <%= form.label :piezimes %><br>
-    <%= form.text_area :piezimes %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Atcelt', clients_path %>
 
