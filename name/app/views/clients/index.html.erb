@@ -8,7 +8,7 @@
     <th scope="col">Uzvards</th>
     <th scope="col">Telefons</th>
     <th scope="col">Adrese</th>
-    <th scope="col"></th>
+    <th scope="col" colspan="2"></th>
   </tr>
 </thead>
 
@@ -20,6 +20,7 @@
       <td><%= client.tel_nummurs %></td>
       <td><%= client.adrese %></td>
       <td><%= link_to 'Vairak', client_path(client) %></td>
+      <td><%= link_to 'Rediget', edit_client_path(client) %></td>
     </tr>
   <% end %>
 </tbody>
