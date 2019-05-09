@@ -7,6 +7,7 @@
     <th scope="col">Vards</th>
     <th scope="col">Uzvards</th>
     <th scope="col">Telefons</th>
+    <th scope="col">E-pasts</th>
     <th scope="col">Adrese</th>
     <th scope="col" colspan="3"></th>
   </tr>
@@ -18,6 +19,7 @@
       <td><%= client.vards %></td>
       <td><%= client.uzvards %></td>
       <td><%= client.tel_nummurs %></td>
+      <td><%= client.epasts %></td>
       <td><%= client.adrese %></td>
       <td><%= link_to 'Vairak', client_path(client) %></td>
       <td><%= link_to 'Rediget', edit_client_path(client) %></td>
