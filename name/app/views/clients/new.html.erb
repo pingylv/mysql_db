@@ -3,6 +3,20 @@
 <h3>Jauna Klienta lapa</h3>
 
 <%= form_with scope: :client, url: clients_path, local: true do |form| %>
+
+  <% if @client.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger" role="alert">
+      <h4>
+        <%= pluralize(@client.errors.count, "kluda") %> Aizliedza sim klientam tikt izveidotam:
+      </h4>
+      <ul>
+        <% @client.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= form.label :vards %><br>
     <%= form.text_field :vards %>
