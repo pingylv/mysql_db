@@ -26,6 +26,12 @@
 
   <strong>piezimes:</strong>
   <%= @client.piezimes %> <br>
+
+  <strong>Tika izveidots:</strong>
+  <%= @client.created_at %> <br>
+
+  <strong>Tika redigets:</strong>
+  <%= @client.updated_at %> <br>
 <hr />
 
 <%= link_to 'Rediget', edit_client_path(@client) %> |
