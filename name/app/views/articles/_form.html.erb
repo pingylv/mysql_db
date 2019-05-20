@@ -3,8 +3,7 @@
   <% if @article.errors.any? %>
     <div id="error_explanation" class="alert alert-danger" role="alert">
       <h4>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
+        <%= pluralize(@article.errors.count, "kluda") %> aizliedza sim ierakstam tikt izveidotam:
       </h4>
       <ul>
         <% @article.errors.full_messages.each do |msg| %>
@@ -17,22 +16,22 @@
 <div class="container">
 
   <p>
-    <%= form.label :title %><br>
+    <%= form.label :nosaukums %><br>
     <%= form.text_field :title %>
   </p>
  
   <p>
-    <%= form.label :description %><br>
+    <%= form.label :detalas %><br>
     <%= form.text_area :description %>
   </p>
 
   <p>
-    <%= form.label :customers %><br>
+    <%= form.label :klients %><br>
     <%= form.text_field :customer %>
   </p>
  
   <p>
-    <%= form.label :user %><br>
+    <%= form.label :lietotajs %><br>
     <%= form.text_field :user %>
   </p>
 

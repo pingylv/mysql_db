@@ -1,13 +1,13 @@
 <hr />
-  <strong>Commenter:</strong>
+  <strong>Komentetajs:</strong>
   <%= comment.commenter %> <br>
  
-  <strong>Comment:</strong>
+  <strong>Komentars:</strong>
   <%= comment.body %> <br>
   
-  <strong>Created at:</strong>
+  <strong>Tika izveidots:</strong>
   <%= comment.created_at %> <br>
 
-  <%= link_to 'Delete Comment', [comment.article, comment],
+  <%= link_to 'Dzest komentaru', [comment.article, comment],
                method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+               data: { confirm: 'Vai jus esat parliecinati?' } %>

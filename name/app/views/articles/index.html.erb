@@ -1,15 +1,15 @@
-<h3>Listing tickets prototype</h3>
-<%= link_to 'New Ticket', new_article_path %> |
-<%= link_to 'Jauns klients', new_client_path %>
+<h3>Ierakstu saraksts</h3>
+<%= link_to 'Jauns Ieraksts', new_article_path %> |
+<%= link_to 'Jauns Klients', new_client_path %>
 
 <table  class="table table-hover">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Title</th>
-      <th scope="col">Description</th>
-      <th scope="col">Customer</th>
-      <th scope="col">User</th>
+      <th scope="col">Nosaukums</th>
+      <th scope="col">Detalas</th>
+      <th scope="col">Klients</th>
+      <th scope="col">Lietotajs</th>
       <th scope="col" colspan="3"></th>
     </tr>
   </thead>
@@ -21,9 +21,9 @@
       <td><%= article.description %></td>
       <td><%= article.customer %></td>
       <td><%= article.user %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Vairak', article_path(article) %></td>
+      <td><%= link_to 'Rediget', edit_article_path(article) %></td>
+      <td><%= link_to 'Dzest', article_path(article),method: :delete, data: { confirm: 'Vai jus esat parliecinati?' } %></td>
     </tr>
   <% end %>
   </tbody>
