@@ -5,11 +5,11 @@
 <table  class="table table-hover">
   <thead>
     <tr>
-      <th scope="col"><%= link_to "ID", :sort => "id" %></th>
-      <th scope="col"><%= link_to "Nosaukums", :sort => "title" %></th>
-      <th scope="col"><%= link_to "Detalas", :sort => "description" %></th>
-      <th scope="col"><%= link_to "Klients", :sort => "customer" %></th>
-      <th scope="col"><%= link_to "Lietotajs", :sort => "user" %></th>
+      <th scope="col"><%= sortable "id" %></th>
+      <th scope="col">Nosaukums</th>
+      <th scope="col">Detalas</th>
+      <th scope="col"><%= sortable "customer", "Klients" %></th>
+      <th scope="col"><%= sortable "user", "Lietotajs" %></th>
       <th scope="col" colspan="3"></th>
     </tr>
   </thead>

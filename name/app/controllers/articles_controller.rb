@@ -1,9 +1,9 @@
 class ArticlesController < ApplicationController
-	
+helper_method :sort_column, :sort_direction	
   http_basic_authenticate_with name: "raitis", password: "parole", except: [:index, :show]
 
   def index
-    	@articles = Article.order(params[:sort])
+    	@articles = Article.order(sort_column + " " + sort_direction )
   end
 
 	def show
@@ -46,7 +46,15 @@ class ArticlesController < ApplicationController
   end
 
 private
-  	def article_params
-    	params.require(:article).permit(:title, :description, :customer, :user)
+  def article_params
+    params.require(:article).permit(:title, :description, :customer, :user)
 	end
+
+  def sort_column
+    Article.column_names.include?(params[:sort]) ? params[:sort] : "id"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 end
