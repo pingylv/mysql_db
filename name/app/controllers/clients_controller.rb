@@ -1,7 +1,8 @@
 class ClientsController < ApplicationController
+helper_method :sort_column, :sort_direction
 
 def index
-	@clients = Client.order(params[:sort])
+	@clients = Client.order(sort_column + " " + sort_direction)
 end
 
 def show
@@ -48,4 +49,11 @@ private
 		params.require(:client).permit(:vards,:uzvards,:personas_kods,:tel_nummurs,:epasts,:adrese,:piezimes)
 	end
 
+  def sort_column
+    Client.column_names.include?(params[:sort]) ? params[:sort] : "id"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 end
