@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  get '/' => 'users#index'
+  post '/sessions' => 'sessions#create'
+  post '/users' => 'users#create'
+  get '/dashboard' => 'badname#index'
 
   	resources :articles do
   		resources :comments

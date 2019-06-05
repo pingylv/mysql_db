@@ -1,0 +1,2 @@
+module BadnameHelper
+end

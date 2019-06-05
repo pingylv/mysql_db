@@ -1,0 +1,2 @@
+class BadnameController < ApplicationController
+end
