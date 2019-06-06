@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>login and registration</title>
-</head>
+<div class="container">
+<h3>login and registration</h3>
+<hr/>
 <body>
-	<h3>
+	<h4>
 		Login
-	</h3>
+	</h4>
 
 	<form action="/sessions" method="POST">
 		<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
@@ -22,10 +20,10 @@
 			<%end%>
 		<%end%>
 	</div>
-
-	<h3>
+	<hr/>
+	<h4>
 		Registration
-	</h3>
+	</h4>
 
 	<form action="/users" method="POST">
 		<input type="hidden" name="authenticity_token" value="form_authenticity_token">			
@@ -46,4 +44,4 @@
 
 
 </body>
-</html>
+</div>
