@@ -1,15 +1,15 @@
 <div class="container">
-<h3>Login and Registration</h3>
+<h3>Pieslegsanas vai Registracija</h3>
 <hr/>
 <body>
 	<h4>
-		Login
+		Pieslegties
 	</h4>
 
 	<form action="/sessions" method="POST">
 		<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
-		<input type="email" name="login[email]" placeholder="email">
-		<input type="password" name="login[password]" placeholder="password">		
+		<input type="email" name="login[email]" placeholder="e-pasts">
+		<input type="password" name="login[password]" placeholder="parole">		
 		<input type="submit" name="submit" class="submit">
 	</form>
 
@@ -22,15 +22,15 @@
 	</div>
 	<hr/>
 	<h4>
-		Registration
+		Registreties
 	</h4>
 
 	<form action="/users" method="POST">
 		<input type="hidden" name="authenticity_token" value="form_authenticity_token">			
-		<input type="name" name="user[name]" placeholder="name">
-		<input type="email" name="user[email]" placeholder="email">
-		<input type="password" name="user[password]" placeholder="password">
-		<input type="password" name="user[password_confirmation]" placeholder="password_confirmation">
+		<input type="name" name="user[name]" placeholder="vards">
+		<input type="email" name="user[email]" placeholder="e-pasts">
+		<input type="password" name="user[password]" placeholder="parole">
+		<input type="password" name="user[password_confirmation]" placeholder="paroles apstiprinasana">
 		<input type="submit" name="submit" class="submit">
 	</form>
 

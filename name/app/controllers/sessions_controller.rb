@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 			session[:user_id] = user.id 
 			redirect_to '/articles'
 		else
-			flash[:login_errors]=['invalid credentials']
+			flash[:login_errors]=['Informacija nesakrit']
 			redirect_to '/'
 		end
 
