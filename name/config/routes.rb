@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get '/' => 'users#index'
+  get '/' => 'users#new'
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
   get '/dashboard' => 'badname#index'
+  get '/users' => 'users#index'
 
   	resources :articles do
   		resources :comments

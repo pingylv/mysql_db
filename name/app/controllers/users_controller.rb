@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+	http_basic_authenticate_with name: "admin", password: "password", except: [:new, :show]
+
 	def index
-		
+		@users = User.all
 	end
 
 	def create

@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
 helper_method :sort_column, :sort_direction	
-  http_basic_authenticate_with name: "raitis", password: "parole", except: [:index, :show]
 
   def index
     	@articles = Article.order(sort_column + " " + sort_direction )
