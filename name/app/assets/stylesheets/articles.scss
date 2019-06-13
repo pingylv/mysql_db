@@ -1,3 +1,19 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.topright2 {
+  position: absolute;
+  top: 8px;
+  right: 130px;
+  font-size: 18px;
+  font-weight: bold;
+}
