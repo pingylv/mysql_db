@@ -1,0 +1,49 @@
+<%= form_with model: @sudziba, local: true do |form| %>
+ 
+  <% if @sudziba.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger" role="alert">
+      <h4>
+        <%= pluralize(@sudziba.errors.count, "kluda") %> aizliedza sim ierakstam tikt izveidotam:
+      </h4>
+      <ul>
+        <% @sudziba.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+<div class="container">
+
+  <p>
+    <%= form.label :nosaukums %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :detalas %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.label :klients %><br>
+    <%= form.text_field :customer %>
+  </p>
+ 
+  <p>
+    <%= form.label :lietotajs %><br>
+    <%= form.text_field :user %>
+  </p>
+
+  <p>
+    <%= form.label :status %><br>
+    <%= form.text_field :status %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+</div>
+
+<% end %>

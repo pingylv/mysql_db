@@ -1,0 +1,37 @@
+<div class="container">
+<div class="topright2"><%= current_user.email %></div>
+
+<h3>Sudzibas informacija</h3>
+<hr />
+
+  <strong>ID:</strong>
+  <%= @sudziba.id %> <br>
+
+  <strong>Nosaukums:</strong>
+  <%= @sudziba.title %> <br>
+ 
+  <strong>Detalas:</strong>
+  <%= @sudziba.description %> <br>
+
+  <strong>Klients:</strong>
+  <%= @sudziba.customer %> <br> 
+
+  <strong>Lietotajs:</strong>
+  <%= @sudziba.user %> <br>
+
+  <strong>Tika izveidots:</strong>
+  <%= @sudziba.created_at %> <br>
+
+<hr />
+
+<h4>Komentari:</h4>
+<%= render @sudziba.komentarss %>
+<hr />
+<h4>Pievienot komentaru:</h4>
+<%= render 'komentarss/form' %>
+<hr /> 
+
+<%= link_to 'Rediget', edit_sudziba_path(@sudziba) %> |
+<%= link_to 'Atpakal', sudzibas_path %>
+
+</div>

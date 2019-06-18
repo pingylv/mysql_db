@@ -1,0 +1,33 @@
+<h3>Sudzibu saraksts</h3>
+<%= link_to 'Jauna sudziba', new_sudziba_path %> |
+<%= link_to 'Klientu saraksts', clients_path %> |
+<%= link_to 'Lietotaju saraksts', users_path %> 
+<div class="topright"><%= current_user.email %></div>
+<table  class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col"><%= sortable "id" %></th>
+      <th scope="col">Nosaukums</th>
+      <th scope="col">Detalas</th>
+      <th scope="col"><%= sortable "customer", "Klients" %></th>
+      <th scope="col"><%= sortable "user", "Lietotajs" %></th>
+      <th scope="col"><%= sortable "status", "Status" %></th>
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @sudzibas.each do |sudziba| %>
+    <tr>
+      <td><%= sudziba.id %></td>
+      <td><%= sudziba.title %></td>
+      <td><%= sudziba.description %></td>
+      <td><%= sudziba.customer %></td>
+      <td><%= sudziba.user %></td>
+      <td><%= sudziba.status %></td>
+      <td><%= link_to 'Vairak', sudziba_path(sudziba) %></td>
+      <td><%= link_to 'Rediget', edit_sudziba_path(sudziba) %></td>
+      <td><%= link_to 'Dzest', sudziba_path(sudziba),method: :delete, data: { confirm: 'Vai jus esat parliecinati?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

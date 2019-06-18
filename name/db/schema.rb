@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_05_161604) do
+ActiveRecord::Schema.define(version: 2019_06_18_152544) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -42,6 +42,25 @@ ActiveRecord::Schema.define(version: 2019_06_05_161604) do
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
+  create_table "komentars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "commenter"
+    t.text "body"
+    t.bigint "sudziba_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sudziba_id"], name: "index_komentars_on_sudziba_id"
+  end
+
+  create_table "sudzibas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "customer"
+    t.string "user"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -51,4 +70,5 @@ ActiveRecord::Schema.define(version: 2019_06_05_161604) do
   end
 
   add_foreign_key "comments", "articles"
+  add_foreign_key "komentars", "sudzibas"
 end
