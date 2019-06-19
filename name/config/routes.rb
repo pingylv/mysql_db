@@ -5,10 +5,6 @@ Rails.application.routes.draw do
   get '/dashboard' => 'badname#index'
   get '/users' => 'users#index'
 
-  resources :articles do
-  		resources :comments
-	end
-
   resources :sudzibas do
       resources :piezimes
   end
