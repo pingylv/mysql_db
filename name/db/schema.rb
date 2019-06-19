@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_18_152544) do
+ActiveRecord::Schema.define(version: 2019_06_19_171452) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -51,6 +51,15 @@ ActiveRecord::Schema.define(version: 2019_06_18_152544) do
     t.index ["sudziba_id"], name: "index_komentars_on_sudziba_id"
   end
 
+  create_table "piezimes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "commenter"
+    t.text "body"
+    t.bigint "sudziba_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sudziba_id"], name: "index_piezimes_on_sudziba_id"
+  end
+
   create_table "sudzibas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -71,4 +80,5 @@ ActiveRecord::Schema.define(version: 2019_06_18_152544) do
 
   add_foreign_key "comments", "articles"
   add_foreign_key "komentars", "sudzibas"
+  add_foreign_key "piezimes", "sudzibas"
 end

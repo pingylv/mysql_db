@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 	end
 
   resources :sudzibas do
-      resources :komentarss
+      resources :piezimes
   end
 
 	resources :clients

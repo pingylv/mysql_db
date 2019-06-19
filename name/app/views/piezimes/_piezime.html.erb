@@ -1,0 +1,13 @@
+<hr />
+  <strong>Komentetajs:</strong>
+  <%= piezime.commenter %> <br>
+ 
+  <strong>Komentars:</strong>
+  <%= piezime.body %> <br>
+  
+  <strong>Tika izveidots:</strong>
+  <%= piezime.created_at %> <br>
+
+  <%= link_to 'Dzest komentaru', [piezime.sudziba, piezime],
+               method: :delete,
+               data: { confirm: 'Vai jus esat parliecinati?' } %>

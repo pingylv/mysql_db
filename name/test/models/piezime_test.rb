@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class KomentarTest < ActiveSupport::TestCase
+class PiezimeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

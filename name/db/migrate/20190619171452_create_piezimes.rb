@@ -1,6 +1,6 @@
-class CreateKomentars < ActiveRecord::Migration[5.2]
+class CreatePiezimes < ActiveRecord::Migration[5.2]
   def change
-    create_table :komentars do |t|
+    create_table :piezimes do |t|
       t.string :commenter
       t.text :body
       t.references :sudziba, foreign_key: true
