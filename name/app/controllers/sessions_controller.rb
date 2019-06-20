@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 		user = User.find_by(email:login_params[:email])
 		if user && user.authenticate(login_params[:password])
 			session[:user_id] = user.id 
-			redirect_to '/articles'
+			redirect_to '/sudzibas'
 		else
 			flash[:login_errors]=['Informacija nesakrit']
 			redirect_to '/'
