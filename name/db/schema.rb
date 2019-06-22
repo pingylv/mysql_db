@@ -42,15 +42,6 @@ ActiveRecord::Schema.define(version: 2019_06_19_171452) do
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
-  create_table "komentars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "commenter"
-    t.text "body"
-    t.bigint "sudziba_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["sudziba_id"], name: "index_komentars_on_sudziba_id"
-  end
-
   create_table "piezimes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
@@ -79,6 +70,5 @@ ActiveRecord::Schema.define(version: 2019_06_19_171452) do
   end
 
   add_foreign_key "comments", "articles"
-  add_foreign_key "komentars", "sudzibas"
   add_foreign_key "piezimes", "sudzibas"
 end
